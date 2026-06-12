@@ -1,0 +1,8 @@
+# Compiled executables
+matmul
+*.o
+*.exe
+*.out
+
+# Mac specific
+.DS_Store
