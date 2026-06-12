@@ -21,6 +21,6 @@ This project requires the NVIDIA CUDA Toolkit (`nvcc` compiler) to be installed 
 ```bash
 # 1. Clone the repository, compile the CUDA code, and execute the binary natively
 git clone [https://github.com/nolanefe/cuda-accelerated-matrix-ops.git](https://github.com/nolanefe/cuda-accelerated-matrix-ops.git)
-cd CUDA-Accelerated-Matrix-Ops
+cd cuda-accelerated-matrix-ops
 make
 ./matmul
