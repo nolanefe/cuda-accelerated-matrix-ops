@@ -19,6 +19,7 @@ jobs:
       uses: Jimver/cuda-toolkit@v0.2.14
       with:
         cuda: '12.2.0'
+        no-cache: 'true'
 
     - name: Compile CUDA Code
       run: make
