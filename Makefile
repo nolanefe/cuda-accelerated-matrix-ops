@@ -1,5 +1,5 @@
 CC = nvcc
-CFLAGS = -O3 -std=c++14
+CFLAGS = -O3 -std=c++14 -allow-unsupported-compiler
 TARGET = matmul
 SRC = src/matmul.cu
 
