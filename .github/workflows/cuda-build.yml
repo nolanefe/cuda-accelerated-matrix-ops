@@ -12,20 +12,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-    - name: Set up NVIDIA CUDA Toolkit
-      uses: Jimver/cuda-toolkit@v0.2.14
-      with:
-        cuda: '12.2.0'
-        use-github-cache: 'false'
+      - name: Set up NVIDIA CUDA Toolkit
+        uses: Jimver/cuda-toolkit@v0.2.14
+        with:
+          cuda: '12.2.0'
+          use-github-cache: 'false'
 
-    - name: Install Compatible Host Compiler
-      run: sudo apt-get install -y g++-12
+      - name: Install Compatible Host Compiler
+        run: sudo apt-get install -y g++-12
 
-    - name: Compile CUDA Code
-      run: make
-      env:
-        # This tells nvcc to use g++-12 instead of the system default
-        CUDAHOSTCXX: /usr/bin/g++-12
+      - name: Compile CUDA Code
+        run: make
+        env:
+          # This tells nvcc to use g++-12 instead of the system default
+          CUDAHOSTCXX: /usr/bin/g++-12
+          
+      - name: Execute Matrix Operations Test
+        run: ./matmul
